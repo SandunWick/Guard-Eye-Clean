@@ -1,0 +1,373 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Navigation Styles */
+nav {
+  
+  background-color: #0c0c0c;
+  color: rgb(160, 152, 152);
+  padding: 1rem;
+}
+
+.nav-content {
+  width: 97%;    
+  max-width: none;
+  background: linear-gradient(to left, #1E293B, #0F172A);
+  box-shadow: 0px 4px 10px #cccccc9c;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topic{
+  color: #020814;
+  text-shadow: 0px 4px 10px #05cef6;
+}
+
+.nav-logo {
+  
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.nav-logo span {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links a {
+  display: inline-block;
+  color: rgb(255, 255, 255);
+   display: inline-block;   /* make them block-like */
+  padding: 8px 14px;       /* space around text */
+  margin: 0 5px;           /* space between containers */
+  background-color: #22222200;  /* container color */
+  border-radius: 6px;      /* rounded corners */
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #f7f7f871;
+  transform: scale(1.1);
+}
+
+.nav-links .signup-btn {
+  background-color: #2563eb;
+  color: #f3f4f6;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+.nav-links .signup-btn:hover {
+  color: #9b9696;
+  background-color: #1e40af;
+}
+
+/* Home Page Styles */
+.home {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #b6b5b5;
+  min-height: 100vh;
+}
+
+.home-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.container.home-content {
+  padding: 20px;
+  text-align: center;
+  z-index: 1;
+  flex: 1;
+  max-width: 50%;
+}
+
+.home-content h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 3px rgb(4, 227, 252); /* Cyan shadow as per your request */
+}
+
+.home-content p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 3px rgba(4, 227, 252, 0.53); /* Matching cyan shadow */
+}
+
+.description{
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 3px rgba(4, 227, 252, 0.53); /* Matching cyan shadow */
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.cta-buttons a {
+  text-decoration: none;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.cta-buttons .signup {
+  background-color: #2563eb;
+}
+
+.cta-buttons .signup:hover {
+  background-color: #1e40af;
+}
+
+.cta-buttons .learn-more {
+  background-color: #4b5563;
+}
+
+.cta-buttons .learn-more:hover {
+  background-color: #374151;
+}
+
+.image-container {
+  flex: 1;
+  max-width: 40%;
+  display: flex;
+  justify-content: flex-end;
+  position: relative; /* allows overlap */
+  z-index: 2; /* above footer */
+  margin-top: 0; /* remove previous top margin */
+  
+}
+
+/* Make the image "sit" above the footer */
+.person-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  position: relative;
+  bottom: -46px;
+   
+}
+
+.footer {
+  padding: 2rem 0;
+  text-align: center;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.889);
+}
+
+.description {
+  font-size: 15.0px;
+  color: #9b9696;
+  margin: 0;
+  padding: 0 20px;
+  box-sizing: border-box;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); /* Subtle shadow for footer */
+}
+
+/* About Page Styles */
+.about {
+  min-height: 100vh;
+  background-color: #f3f4f6;
+  padding: 4rem 0;
+}
+
+.about h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.about p {
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+}
+
+/* Services Page Styles */
+.services {
+  min-height: 100vh;
+  background-color: #f3f4f6;
+  padding: 4rem 0;
+}
+
+.services h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.services ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  font-size: 1.125rem;
+}
+
+/* Pricing Page Styles */
+.pricing {
+  min-height: 100vh;
+  background-color: #f3f4f6e3;
+  padding: 4rem 0;
+}
+
+.pricing h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .pricing-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.pricing-card {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.pricing-card h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.pricing-card p.price {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+.pricing-card a {
+  display: block;
+  margin-top: 1rem;
+  background-color: #2563eb;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.pricing-card a:hover {
+  background-color: #1e40af;
+}
+
+/* Form Styles (Contact, Sign Up, Login) */
+.form-container {
+  min-height: 100vh;
+  background-color: #f3f4f6;
+  padding: 4rem 0;
+}
+
+.form-container h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.form-box {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.form-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-box input,
+.form-box textarea {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-box textarea {
+  min-height: 100px;
+}
+
+.form-box button {
+  background-color: #2563eb;
+  color: white;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form-box button:hover {
+  background-color: #1e40af;
+}
+
+.services-container {
+  padding: 20px;
+}
+.animated-heading, .animated-paragraph {
+  line-height: 1.5;
+}
+.heading-word-clip, .paragraph-word-clip {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom; /* Ensures smooth sliding */
+}
+.heading-word-inner, .paragraph-word-inner {
+  display: inline-block;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .home-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container.home-content,
+  .image-container {
+    max-width: 100%;
+  }
+
+  .image-container {
+    justify-content: center;
+    margin-top: 20px;
+  }
+}

@@ -1,0 +1,335 @@
+/* Root + gradient background */
+.dashboard-root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: radial-gradient(1200px 800px at 20% 20%, #f8ffd8, #e9f0ff 40%, #e6e9f0 100%);
+  color: #111;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+}
+
+/* Header */
+.dash-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 22px;
+  background: linear-gradient(90deg, #2b5876, #4e4376);
+  color: #fff;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.brand {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.header-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.header-actions .ghost {
+  border: 1px solid rgba(255,255,255,0.5);
+  background: transparent;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.header-actions .logout {
+  border: none;
+  background: #a90303;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease; 
+}
+
+.header-actions .logout:hover {
+  background: #630303;
+  transform: scale(1.05); 
+}
+
+/* Main 2-column layout */
+.dash-main {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Left column */
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.mini-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.mini {
+  background: rgba(255,255,255,0.7);
+  border: 1px solid rgba(0,0,0,0.1);
+  padding: 8px 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.mini.active {
+  background: #2b5876;
+  color: #fff;
+  border-color: transparent;
+}
+
+.left-content {
+  background: rgba(255,255,255,0.85);
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 16px;
+  padding: 16px;
+  min-height: 360px;
+}
+
+/* Home grid */
+.home-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.welcome-pill {
+  background: #eef4ff;
+  border: 2px solid #2b6cb0;
+  color: #1a202c;
+  font-weight: 700;
+  padding: 14px 18px;
+  border-radius: 999px;
+  width: fit-content;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.tile {
+  background: #fff;
+  border-radius: 18px;
+  border: 2px solid #2c3e50;
+  padding: 18px;
+  min-height: 140px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.btn-tile {
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  font-size: 18px;
+  background: linear-gradient(145deg, #f7f7f7, #f0f0f0);
+  transition: transform 0.06s ease, box-shadow 0.2s ease;
+}
+
+.btn-tile:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+}
+
+.btn-tile.profile {
+  color: #e74c3c;
+}
+
+.bookings h3 {
+  margin: 0 0 8px 0;
+}
+
+.bookings ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.bookings li {
+  padding: 4px 0;
+  border-bottom: 1px dashed #d6d6d6;
+}
+
+.muted {
+  color: #666;
+  font-style: italic;
+}
+
+/* Right column (sticky alerts) */
+.right {
+  position: sticky;
+  top: 12px;
+  align-self: start;
+}
+
+.alerts-card {
+  height: calc(100vh - 120px);
+  background: #fff;
+  border: 2px solid #e74c3c;
+  border-radius: 18px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+}
+
+.alerts-header {
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.alerts-body {
+  overflow-y: auto;
+  padding-right: 6px;
+}
+
+.alert-row {
+  border-bottom: 1px dashed #ddd;
+  padding: 8px 0;
+}
+
+.section-title {
+  margin-top: 14px;
+  font-weight: 700;
+}
+
+/* Light / Dark helpers (optional if your ThemeContext toggles classes) */
+.dashboard-root.dark {
+  color: #f3f3f3;
+  background: radial-gradient(1200px 800px at 20% 20%, #1f2937, #0f172a 40%, #0b1220 100%);
+}
+
+.dashboard-root.dark .left-content,
+.dashboard-root.dark .tile,
+.dashboard-root.dark .alerts-card,
+.dashboard-root.dark .mini {
+  background: rgba(255,255,255,0.06);
+  color: #f3f3f3;
+  border-color: rgba(255,255,255,0.1);
+}
+
+.dashboard-root.dark .mini.active {
+  background: #4e4376;
+}
+.profile-container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 30px;
+  text-align: center;
+}
+
+.verification-form label {
+  font-weight: bold;
+}
+.verification-form input,
+.verification-form button {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+}
+.verification-form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-bottom: 5px;
+  margin-top: 15px;
+}
+.verification-form button:hover {
+  background-color: #0056b3;
+   transform: scale(1.03);
+}
+.verification-form button:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+.title-center {
+  text-align: left;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  color: #9b9696;
+}
+.title-center{
+  margin-top: 0;
+  padding-bottom: 20px;      
+  border-bottom: 1.5px solid #9b9696;
+  font-size: 1.5rem;
+  display: block;
+}
+.check-button-register {
+  margin-top: 40px;
+  padding: 15px;
+  background: linear-gradient(to right, #4a90e2, #357abd);
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.check-button-register:hover {
+  background: linear-gradient(to right, #357abd, #2d5fa8);
+  transform: scale(1.03);
+}
+.messages-1{
+  align-content: center;
+  text-align: left;
+  font-size: 18px;
+}
+.welcomeMsg{
+  align-content: center;
+}
+.react-tel-input .country-list {
+  text-align: left;
+}
+
+.verification-form {
+  color: #0bbef0;
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  background: linear-gradient(to left, #1E293B, #0F172A);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(251, 251, 251, 0.134);
+  text-align: left;
+  font-family: Arial, sans-serif;
+}
+
+.profile-container svg {
+  font-size: 0.5rem;
+  margin-left: 0.1rem;
+  vertical-align: bottom;
+  color: red;
+}
+
+.label {
+  margin-top: 10px;
+}
+
+.form-group {
+  margin-bottom: 2px; /* Space between each label-input pair */
+  display: flex;
+  flex-direction: column;
+  gap: 1px; /* Space between label and input */
+}

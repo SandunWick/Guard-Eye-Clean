@@ -1,0 +1,21 @@
+.pricing {
+  background-image: url("./assets/Price.png");
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  min-height: auto; 
+  padding: 3px ,0;
+  width: 100%; 
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.Price-container {
+  margin-top: 0px;
+  background-color: rgba(255, 255, 255, 0.048); 
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  color: #000; 
+}

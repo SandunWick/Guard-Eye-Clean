@@ -1,0 +1,22 @@
+/* About.css */
+.about {
+  background-image: url("./assets/About.png");
+  background-size: cover; /* Scales the image to cover the entire container */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  min-height: 100vh; /* Ensures the div takes up the full viewport height */
+  width: 100%; /* Ensures the div takes up the full width */
+  display: flex;
+  justify-content: left;
+  align-items: flex-start;
+}
+
+.about-container {
+  margin-left: 20px;
+  margin-top: 0px;
+  background-color: rgba(21, 39, 81, 0.507); 
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+  color: #faf8f8c7;
+}
