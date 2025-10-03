@@ -94,6 +94,7 @@ function ViewGuards() {
            
             <p><strong>Name:</strong> {selectedGuard.name || "N/A"}</p>
             <p><strong>Service Number:</strong> {selectedGuard.serviceNo || "N/A"}</p>
+            <p><strong>NIC Number:</strong> {selectedGuard.nicNumber || "N/A"}</p>
             <p><strong>Contact Number:</strong> {selectedGuard.contactNo || "N/A"}</p>
             <p><strong>Gender:</strong> {selectedGuard.gender || "N/A"}</p>
             <p><strong>Birthday:</strong> {selectedGuard.birthday || "N/A"}</p>
@@ -108,9 +109,14 @@ function ViewGuards() {
             <p><strong>Address:</strong> {selectedGuard.address || "N/A"}</p>
             <p><strong>Medical Report:</strong> {selectedGuard.medical || "N/A"}</p>
             <p><strong>Police Report:</strong> {selectedGuard.police || "N/A"}</p>
-            <p><strong>Gramaniladhari certificate:</strong> {selectedGuard.gramaniladari || "N/A"}</p>
-             <p><strong>Job Count:</strong> {selectedGuard.jobCount || "N/A"}</p>
-             <p><strong>Rating:</strong> {selectedGuard.rating || "N/A"}</p>
+            <p><strong>Gramaniladhari Certificate:</strong> {selectedGuard.gramaniladari || "N/A"}</p>
+            <p><strong>Job Count:</strong> {selectedGuard.jobCount || "N/A"}</p>
+            <p><strong>Rating:</strong> {selectedGuard.rating || "N/A"}</p>
+            <p><strong>OCR Verified:</strong> {selectedGuard.ocrVerified !== undefined ? (selectedGuard.ocrVerified ? "Yes" : "No") : "N/A"}</p>
+            <p><strong>Manual Override:</strong> {selectedGuard.manualOverride !== undefined ? (selectedGuard.manualOverride ? "Yes" : "No") : "N/A"}</p>
+            <p><strong>Is Duplicate NIC:</strong> {selectedGuard.isDuplicateNIC !== undefined ? (selectedGuard.isDuplicateNIC ? "Yes" : "No") : "N/A"}</p>
+            <p><strong>Duplicate NIC Service No:</strong> {selectedGuard.duplicateNICServiceNo || "N/A"}</p>
+            <p><strong>Duplicate NIC Name:</strong> {selectedGuard.duplicateNICName || "N/A"}</p>
           </div>
         </div>
       )}
